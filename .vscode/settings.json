@@ -1,5 +1,5 @@
 {
-    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.watchOnLaunch": false,
     "liveSassCompile.settings.compileOnWatch": true,
     "liveSassCompile.settings.formats": [
         // {

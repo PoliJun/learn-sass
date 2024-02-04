@@ -24,6 +24,47 @@
   font-weight: 700;
 }
 
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-outs;
+}
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-outs;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-outs;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-outs;
+}
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+
 body {
   background: #272727;
   color: #fff;
@@ -61,7 +102,7 @@ main .social-icons {
 }
 main .social-icons a {
   padding: 0.4rem;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-outs;
 }
 main .social-icons a:hover {
   color: #ff652f;
