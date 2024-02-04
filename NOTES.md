@@ -259,9 +259,13 @@ Mixed unit calculate must use `calc()`
 `#{$i}`
 
 ```scss
-@for $i from 1 to 4{
-    .menu-nav__item:nth-child(3{$i}){
+@for $i from 1 to 4 {
+    .menu-nav__item:nth-child(3{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
     }
 }
 ```
+
+## Some properties
+
+-   `margin-block-end`
