@@ -253,3 +253,15 @@ Functions and mixins are similar.
 -   This is not good: `width: 80% - 400px;`
 
 Mixed unit calculate must use `calc()`
+
+## variables in `:nth-child()`
+
+`#{$i}`
+
+```scss
+@for $i from 1 to 4{
+    .menu-nav__item:nth-child(3{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}
+```
