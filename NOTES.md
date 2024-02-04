@@ -230,3 +230,26 @@ Functions and mixins are similar.
 
 `@content` is what will be filled in `@include` clause
 
+## Extend: `@extend`
+
+```scss
+#{&}__paragraph1 {
+    font-weight: weight("bold");
+    &:hover {
+        color: pink;
+    }
+}
+#{&}__paragraph2 {
+    @extend .main_paragraph1;
+    &:hover {
+        color: $accent-color;
+    }
+}
+```
+
+## `calc()`
+
+-   This is good: `width: 80% - 40%;`
+-   This is not good: `width: 80% - 400px;`
+
+Mixed unit calculate must use `calc()`
