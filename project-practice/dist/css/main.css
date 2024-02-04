@@ -31,7 +31,7 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  transition: all 0.5s ease-in-outs;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger {
   position: absolute;
@@ -40,7 +40,7 @@
   width: 28px;
   height: 3px;
   background: #fff;
-  transition: all 0.5s ease-in-outs;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before {
   content: "";
@@ -49,7 +49,7 @@
   width: 28px;
   height: 3px;
   background: #fff;
-  transition: all 0.5s ease-in-outs;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::after {
   content: "";
@@ -58,11 +58,46 @@
   width: 20px;
   height: 3px;
   background: #fff;
-  transition: all 0.5s ease-in-outs;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger.open {
   transform: rotate(720deg);
   background: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn__burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #272727;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateY(0);
 }
 
 body {
@@ -102,7 +137,7 @@ main .social-icons {
 }
 main .social-icons a {
   padding: 0.4rem;
-  transition: all 0.5s ease-in-outs;
+  transition: all 0.5s ease-in-out;
 }
 main .social-icons a:hover {
   color: #ff652f;

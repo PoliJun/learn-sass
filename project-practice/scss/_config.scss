@@ -1,5 +1,5 @@
 $primary-color: #272727;
-$seccondary-color: #ff652f;
+$secondary-color: #ff652f;
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@ $seccondary-color: #ff652f;
 }
 
 @mixin transition-ease {
-    transition: all 0.5s ease-in-outs;
+    transition: all 0.5s ease-in-out;
 }
 
 @function set-text-color($color) {
