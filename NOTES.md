@@ -142,9 +142,44 @@ Example:
 }
 ```
 
+### default parameter
+
+```scss
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+```
+
+vs.
+
+```scss
+@mixin theme($light-theme) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+```
+
+The difference between these two Sass mixins is that the first one has a **default parameter** for `$light-theme`, while the second one does not. A default parameter is a value that is assigned to a parameter if no argument is passed to the mixin¹. For example, if you write `@include theme;` without specifying the value of `$light-theme`, the first mixin will assume that `$light-theme` is `true`, while the second mixin will throw an error. Default parameters are useful for providing fallback values or optional arguments to mixins¹.
+
+¹: [Sass: Mixins](^1^)
+
+Source: Conversation with Bing, 2/4/2024
+(1) The Perfect Theme Switch Component | Aleksandr Hovhannisyan. https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/.
+(2) The Perfect Theme Switch Component | Aleksandr Hovhannisyan. https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/.
+(3) Angular - how to theme my own component using mixin?. https://stackoverflow.com/questions/59461568/angular-how-to-theme-my-own-component-using-mixin.
+(4) Light and Dark Theme using Mixin - Medium. https://medium.com/ampersand-academy/light-and-dark-theme-using-mixin-98eb025032c9.
+(5) css - Color themes with SASS mixins - Stack Overflow. https://stackoverflow.com/questions/23446965/color-themes-with-sass-mixins.
+
 ## functions vs. mixins
 
 Functions and mixins are similar.
 
--   Function should be used on computing values
+-   Function should be used on computing values and returning values
 -   Mixins should used on setting properties
+
+## `@media` and `@content`

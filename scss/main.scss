@@ -5,18 +5,37 @@
     @return map-get($font-weights, $weight-name);
 }
 
+// @mixin theme($light-theme: true) {
+//     @if $light-theme {
+//         background: lighten($primary-color, 100%);
+//         color: darken($text-color, 100%);
+//     }
+// }
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
 body {
-    background: $bgcolor;
+    background: $primary-color;
 }
 
 .main {
+    @include flexCenter(column);
     width: 80%;
     margin: 0 auto;
 
     #{&}__paragraph {
-        font-weight: weight(regular);
+        font-weight: weight("bold");
         &:hover {
             color: pink;
         }
     }
 }
+
+// .light {
+//     @include theme();
+// }
