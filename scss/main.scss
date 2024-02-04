@@ -5,12 +5,12 @@
     @return map-get($font-weights, $weight-name);
 }
 
-// @mixin theme($light-theme: true) {
-//     @if $light-theme {
-//         background: lighten($primary-color, 100%);
-//         color: darken($text-color, 100%);
-//     }
-// }
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
 
 @mixin flexCenter($direction) {
     display: flex;
@@ -18,24 +18,32 @@
     align-items: center;
     flex-direction: $direction;
 }
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
 
 body {
     background: $primary-color;
+    color: $text-color;
 }
 
 .main {
-    @include flexCenter(column);
+    @include flexCenter(row);
     width: 80%;
     margin: 0 auto;
-
     #{&}__paragraph {
         font-weight: weight("bold");
         &:hover {
             color: pink;
         }
     }
+    @include mobile{
+        flex-direction: column;
+    }
 }
 
-// .light {
-//     @include theme();
-// }
+.light {
+    @include theme($light-theme: true);
+}

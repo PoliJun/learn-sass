@@ -182,4 +182,51 @@ Functions and mixins are similar.
 -   Function should be used on computing values and returning values
 -   Mixins should used on setting properties
 
+## Built-in functions
+
+-   `lighten($text-color, 100%)`
+-   `darken($tex-color, 100%)`
+
 ## `@media` and `@content`
+
+```scss
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+.main {
+    @include flexCenter(row);
+    width: 80%;
+    margin: 0 auto;
+    #{&}__paragraph {
+        font-weight: weight("bold");
+        &:hover {
+            color: pink;
+        }
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.light {
+    @include theme($light-theme: true);
+}
+```
+
+`@content` is what will be filled in `@include` clause
+
