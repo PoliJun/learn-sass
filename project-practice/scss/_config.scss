@@ -18,3 +18,23 @@ $secondary-color: #ff652f;
         @return #fff;
     }
 }
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}

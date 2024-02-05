@@ -1,8 +1,10 @@
 @import "config";
 @import "home";
 @import "menu";
-@import 'about';
-@import 'projects';
+@import "about";
+@import "projects";
+@import "contact";
+@import "responsive";
 
 body {
     background: $primary-color;
@@ -21,8 +23,8 @@ a {
     color: set-text-color($primary-color);
     text-decoration: none;
 }
-.text-secondary{
-    color:$secondary-color;
+.text-secondary {
+    color: $secondary-color;
 }
 header {
     position: fixed;
