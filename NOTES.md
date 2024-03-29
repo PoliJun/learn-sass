@@ -261,7 +261,7 @@ Mixed unit calculate must use `calc()`
 
 ```scss
 @for $i from 1 to 4 {
-    .menu-nav__item:nth-child(3{$i}) {
+    .menu-nav__item:nth-child(#{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
     }
 }
