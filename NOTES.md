@@ -8,6 +8,7 @@
 -   See in output
 -   Watch mode: auto Compile at saving
 -   only modify the scss file, not modify the css file.
+-   modify output compile path
 
 ## Variables
 

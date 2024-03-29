@@ -65,28 +65,28 @@
                 top: 0;
                 opacity: 0.9;
             }
-            .projects__btn{
+            .projects__btn {
                 opacity: 1;
             }
         }
     }
-    &__btns{
+    &__btns {
         position: absolute;
         top: 0;
         height: 100%;
         width: 100%;
         z-index: 1;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: center;
     }
-    &__btn{
+    &__btn {
         opacity: 0;
         color: set-text-color($secondary-color);
         @include transition-ease;
 
-        &:hover{
+        &:hover {
             color: set-text-color(set-text-color($secondary-color));
         }
     }
