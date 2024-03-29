@@ -2,12 +2,6 @@
     "liveSassCompile.settings.watchOnLaunch": false,
     "liveSassCompile.settings.compileOnWatch": true,
     "liveSassCompile.settings.formats": [
-        // {
-        //   "format": "expanded",
-        //   "extensionName": ".css",
-        //   "savePath": null,
-        //   "savePathReplacementPairs": null
-        // }
         {
             "format": "expanded",
             "extensionName": ".css",
